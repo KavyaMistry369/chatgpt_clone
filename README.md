@@ -9,7 +9,6 @@ This Flutter app is a clone of ChatGPT, integrating powerful AI models like Chat
 - **Conversational Interface**: Engage in natural language conversations with ChatGPT 3.5 Turbo.
 - **Image Generation**: Utilize DALL-E 2 to generate images based on textual prompts.
 - **Interactive Experience**: Smooth and intuitive user interface for seamless interaction.
-- **Customization Options**: Tailor the app's behavior and appearance to suit your preferences.
 
 ## Usage
 
@@ -28,9 +27,9 @@ This Flutter app is a clone of ChatGPT, integrating powerful AI models like Chat
 </div>
 <br/>
 <div align="center">
-    <img src="/screenshots/screenshot4.png" alt="Screenshot 4" width="250"/>
-    <img src="/screenshots/screenshot5.png" alt="Screenshot 5" width="250"/>
-    <img src="/screenshots/screenshot6.png" alt="Screenshot 6" width="250"/>
+    <img src="https://github.com/KavyaMistry369/chatgpt_clone/assets/130814792/525af0cb-a681-4dfc-8a7d-1e0f98c42cb9" alt="Screenshot 4" width="250"/>
+    <img src="https://github.com/KavyaMistry369/chatgpt_clone/assets/130814792/ace06cd2-f7bb-4727-8679-c3af82bd4771" alt="Screenshot 5" width="250"/>
+    <img src="https://github.com/KavyaMistry369/chatgpt_clone/assets/130814792/0c15425a-75cd-46d1-9e06-c23c62e5df44" alt="Screenshot 6" width="250"/>
 </div>
 
 ## Credits
