@@ -11,16 +11,6 @@ This Flutter app is a clone of ChatGPT, integrating powerful AI models like Chat
 - **Interactive Experience**: Smooth and intuitive user interface for seamless interaction.
 - **Customization Options**: Tailor the app's behavior and appearance to suit your preferences.
 
-## Installation
-
-To run this app locally, follow these steps:
-
-1. Clone this repository to your local machine.
-2. Ensure you have Flutter installed. If not, refer to the [Flutter documentation](https://flutter.dev/docs/get-started/install) for installation instructions.
-3. Navigate to the project directory and run `flutter pub get` to install dependencies.
-4. Connect a device or start an emulator.
-5. Run `flutter run` to launch the app on your device/emulator.
-
 ## Usage
 
 1. Upon launching the app, you'll be presented with the chat interface.
@@ -32,7 +22,7 @@ To run this app locally, follow these steps:
 ## Screenshots
 
 <div align="center">
-    <img src="/screenshots/screenshot1.png" alt="Screenshot 1" width="250"/>
+    <img src="/Desktop/1.png" alt="Screenshot 1" width="250"/>
     <img src="/screenshots/screenshot2.png" alt="Screenshot 2" width="250"/>
     <img src="/screenshots/screenshot3.png" alt="Screenshot 3" width="250"/>
 </div>
