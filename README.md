@@ -22,7 +22,7 @@ This Flutter app is a clone of ChatGPT, integrating powerful AI models like Chat
 ## Screenshots
 
 <div align="center">
-    <img src="/Desktop/1.png" alt="Screenshot 1" width="250"/>
+    <img src="Desktop/1.png" alt="Screenshot 1" width="250"/>
     <img src="/screenshots/screenshot2.png" alt="Screenshot 2" width="250"/>
     <img src="/screenshots/screenshot3.png" alt="Screenshot 3" width="250"/>
 </div>
