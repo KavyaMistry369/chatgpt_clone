@@ -1,6 +1,6 @@
 # ChatGPT Clone App
 
-![Banner](/banner/banner.png)
+![Banner](Downloads/facebook.png.png)
 
 This Flutter app is a clone of ChatGPT, integrating powerful AI models like ChatGPT 3.5 Turbo and DALL-E 2 to generate conversational responses and image-based content.
 
