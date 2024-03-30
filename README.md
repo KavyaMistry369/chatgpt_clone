@@ -34,7 +34,7 @@ This Flutter app is a clone of ChatGPT, integrating powerful AI models like Chat
 
 ## App Logo
 
-<img src="https://github.com/KavyaMistry369/chatgpt_clone/assets/130814792/36f05afa-a906-478a-99ec-cb9308b700c7" alt="Big Logo" width="500">
+<img src="https://github.com/KavyaMistry369/chatgpt_clone/assets/130814792/d991a7ae-c339-429b-87fc-d21a0bb2364d" alt="Big Logo" width="500">
 
 ## Credits
 
