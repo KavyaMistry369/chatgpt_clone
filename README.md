@@ -22,9 +22,9 @@ This Flutter app is a clone of ChatGPT, integrating powerful AI models like Chat
 ## Screenshots
 
 <div align="center">
-    <img src="Desktop/1.png" alt="Screenshot 1" width="250"/>
-    <img src="/screenshots/screenshot2.png" alt="Screenshot 2" width="250"/>
-    <img src="/screenshots/screenshot3.png" alt="Screenshot 3" width="250"/>
+    <img src="https://github.com/KavyaMistry369/chatgpt_clone/assets/130814792/c366723f-b337-44d1-bc88-4f2e0c3e510f" alt="Screenshot 1" width="250"/>
+    <img src="https://github.com/KavyaMistry369/chatgpt_clone/assets/130814792/5740dffc-294f-4c96-a593-aa5814076bed" alt="Screenshot 2" width="250"/>
+    <img src="https://github.com/KavyaMistry369/chatgpt_clone/assets/130814792/6ff8de51-d46a-4f54-b940-e44a93f67172" alt="Screenshot 3" width="250"/>
 </div>
 <br/>
 <div align="center">
@@ -41,3 +41,4 @@ This Flutter app is a clone of ChatGPT, integrating powerful AI models like Chat
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
