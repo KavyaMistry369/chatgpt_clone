@@ -11,31 +11,41 @@ class ImagePage extends StatelessWidget {
 
     TextEditingController msgController = TextEditingController();
     return Scaffold(
-      body:  Padding(padding: EdgeInsets.all(16),child: ListView.builder(itemCount:ImageHelper.imageHelper.messages.length,itemBuilder: (context, index) => (index%2==0)?Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Text("User",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w500),),
-              ],
-            ),
-            ListTile(title: Text("${ImageHelper.imageHelper.messages[index]['content']}",style: TextStyle(fontSize: 20),),),
-          ],
-        ),
-      ):Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Text("Dall-e-2",style: TextStyle(fontSize: 20,color: Colors.teal,fontWeight: FontWeight.w500),),
-              ],
-            ),
-            Image.network("${ImageHelper.imageHelper.messages[index]['content']}",),
-          ],
-        ),
-      )),),
+      body:  Padding(padding: EdgeInsets.all(16),child: FutureBuilder(
+        future: ImageHelper.imageHelper.getImages(prompt: msgController.text),
+        builder: (context, snapshot)  {
+          if(snapshot.hasData){
+            return ListView.builder(itemCount:ImageHelper.imageHelper.messages.length,itemBuilder: (context, index) => (index%2==0)?Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Text("User",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w500),),
+                    ],
+                  ),
+                  ListTile(title: Text("${ImageHelper.imageHelper.messages[index]['content']}",style: TextStyle(fontSize: 20),),),
+                ],
+              ),
+            ):Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Text("Dall-e-2",style: TextStyle(fontSize: 20,color: Colors.teal,fontWeight: FontWeight.w500),),
+                    ],
+                  ),
+                  Image.network("${ImageHelper.imageHelper.messages[index]['content']}",),
+                ],
+              ),
+            ));
+          }
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
+        }
+      ),),
       floatingActionButton: FloatingActionButton(onPressed: (){
         showBottomSheet(
           context: context, builder: (context) => Container(

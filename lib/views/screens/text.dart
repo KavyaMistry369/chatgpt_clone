@@ -9,31 +9,36 @@ class TextPage extends StatelessWidget {
   Widget build(BuildContext context) {
     TextEditingController msgController = TextEditingController();
     return Scaffold(
-      body: Padding(padding: EdgeInsets.all(16),child: ListView.builder(itemCount:TextHelper.textHelper.messages.length,itemBuilder: (context, index) => (index%2==0)?Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            Row(
+      body: Padding(padding: EdgeInsets.all(16),child: FutureBuilder(
+        future: TextHelper.textHelper.sendMessage(prompt: msgController.text),
+        builder: (context, snapshot) {
+          return ListView.builder(itemCount:TextHelper.textHelper.messages.length,itemBuilder: (context, index) => (index%2==0)?Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
               children: [
-                Text("User",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w500),),
+                Row(
+                  children: [
+                    Text("User",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w500),),
+                  ],
+                ),
+                ListTile(title: Text("${TextHelper.textHelper.messages[index]['content']}"),),
               ],
             ),
-            ListTile(title: Text("${TextHelper.textHelper.messages[index]['content']}"),),
-          ],
-        ),
-      ):Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            Row(
+          ):Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
               children: [
-                Text("ChatGPT",style: TextStyle(fontSize: 20,color: Colors.teal,fontWeight: FontWeight.w500),),
+                Row(
+                  children: [
+                    Text("ChatGPT",style: TextStyle(fontSize: 20,color: Colors.teal,fontWeight: FontWeight.w500),),
+                  ],
+                ),
+                ListTile(title: Text("${TextHelper.textHelper.messages[index]['content']}"),),
               ],
             ),
-            ListTile(title: Text("${TextHelper.textHelper.messages[index]['content']}"),),
-          ],
-        ),
-      )),),
+          ));
+        }
+      ),),
       floatingActionButton: FloatingActionButton(onPressed: (){
         showBottomSheet(
           context: context, builder: (context) => Container(
@@ -48,6 +53,7 @@ class TextPage extends StatelessWidget {
               decoration: InputDecoration(
                 suffixIcon: IconButton(onPressed: (){
                   TextHelper.textHelper.sendMessage(prompt: msgController.text);
+                  msgController.clear();
                 }, icon: const Icon(Icons.send_outlined,color: Colors.teal,)),
                 hintText: "Text prompt",
                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),

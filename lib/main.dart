@@ -1,13 +1,15 @@
+import 'package:chatgpt_clone/controllers/provider_one.dart';
 import 'package:chatgpt_clone/utils/route.dart';
 import 'package:chatgpt_clone/views/screens/home.dart';
 import 'package:chatgpt_clone/views/screens/image.dart';
 import 'package:chatgpt_clone/views/screens/splash.dart';
 import 'package:chatgpt_clone/views/screens/text.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main (){
   runApp(
-    const MyApp(),
+    ChangeNotifierProvider(create: (context) => ProviderOne(),child: const MyApp(),)
   );
 }
 
@@ -18,9 +20,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
     debugShowCheckedModeBanner: false,
-    darkTheme: ThemeData(
+    theme: ThemeData(
       useMaterial3: true,
-      brightness: Brightness.dark,
+      brightness: (Provider.of<ProviderOne>(context).isDark)?Brightness.light:Brightness.dark,
       colorSchemeSeed: Colors.teal.shade700,
     ),
       routes: {
